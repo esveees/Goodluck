@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+<title>For Mira</title>
+<meta name="description" content="A little something for Mira before her Qur'an exam." />
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,400&family=Jost:wght@300;400;500&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+<canvas id="particles" aria-hidden="true"></canvas>
+
+<button id="musicToggle" class="music-toggle" aria-label="Toggle background music" aria-pressed="false">
+  <span class="music-toggle__icon" aria-hidden="true">
+    <svg viewBox="0 0 24 24" width="16" height="16"><path d="M9 18V5l12-2v13" stroke="currentColor" stroke-width="1.4" fill="none" stroke-linecap="round" stroke-linejoin="round"/><circle cx="6" cy="18" r="3" stroke="currentColor" stroke-width="1.4" fill="none"/><circle cx="18" cy="16" r="3" stroke="currentColor" stroke-width="1.4" fill="none"/></svg>
+  </span>
+  <span class="music-toggle__label">music</span>
+</button>
+<audio id="bgMusic" src="assets/music.mp3" loop preload="auto"></audio>
+
+<!-- 1. OPENING -->
+<section id="intro" class="screen screen--intro" aria-label="Opening">
+  <div class="glow glow--center" aria-hidden="true"></div>
+  <div class="pattern-overlay" aria-hidden="true"></div>
+  <div class="intro__content">
+    <p class="arabic arabic--bismillah">بِسْمِ اللَّهِ الرَّحْمَنِ الرَّحِيمِ</p>
+    <h1 class="intro__for">For my Mira <span class="heart">♡</span></h1>
+    <p class="intro__note">I made a little something for you&hellip;</p>
+    <button id="openLetter" class="btn btn--primary">
+      <span>Open your message</span>
+    </button>
+  </div>
+</section>
+
+<!-- MAIN EXPERIENCE (hidden until opened) -->
+<main id="letter" class="letter" hidden>
+
+  <!-- 2. A LITTLE MESSAGE -->
+  <section class="screen screen--message" aria-label="A little message">
+    <div class="reveal-text" data-reveal-block>
+      <p class="letter-text">
+        <span data-reveal-line>&ldquo;I know you&rsquo;ve worked hard for this.</span>
+        <span data-reveal-line>So before you walk into that exam,</span>
+        <span data-reveal-line>I just want you to take a deep breath</span>
+        <span data-reveal-line>and remember how much effort</span>
+        <span data-reveal-line>you&rsquo;ve put into this.&rdquo;</span>
+      </p>
+    </div>
+  </section>
+
+  <!-- 3. A DUA FOR YOU -->
+  <section class="screen screen--dua" aria-label="A dua for you">
+    <div class="glow glow--dua" aria-hidden="true"></div>
+    <div class="dua__content" data-reveal-block>
+      <p class="arabic arabic--dua" data-reveal-line>رَبِّ زِدْنِي عِلْمًا</p>
+      <p class="dua__translation" data-reveal-line>&ldquo;My Lord, increase me in knowledge.&rdquo;</p>
+      <p class="dua__ref" data-reveal-line>Qur&rsquo;an 20:114</p>
+
+      <button id="duaBtn" class="btn btn--ghost" data-reveal-line>
+        <span>A little dua for you</span>
+      </button>
+
+      <div id="duaReveal" class="dua-reveal" hidden>
+        <p class="dua-reveal__text">
+          &ldquo;May Allah make the verses easy for you to remember, keep your heart peaceful, give you confidence when you need it, and bless all the effort you&rsquo;ve put in. 🤍&rdquo;
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- 4. YOU'VE GOT THIS -->
+  <section class="screen screen--peak" aria-label="You've got this">
+    <div class="glow glow--peak" aria-hidden="true"></div>
+    <h2 class="peak-text" data-reveal-block>You&rsquo;ve got this. 🤍</h2>
+  </section>
+
+  <!-- 5. FINAL -->
+  <section class="screen screen--final" aria-label="For Mira">
+    <div class="pattern-overlay pattern-overlay--final" aria-hidden="true"></div>
+    <div class="final__content" data-reveal-block>
+      <h2 class="final__headline" data-reveal-line>Good luck, Mira. 🤍</h2>
+      <p class="final__line" data-reveal-line>May Allah be with you in every verse, every answer, and every moment.</p>
+      <p class="final__line final__line--close" data-reveal-line>Bismillah. You&rsquo;ve got this.</p>
+
+      <svg class="crescent" viewBox="0 0 120 120" aria-hidden="true" data-reveal-line>
+        <path d="M70 14a46 46 0 1 0 0 92 38 38 0 1 1 0-92Z" fill="none" stroke="currentColor" stroke-width="1"/>
+      </svg>
+    </div>
+  </section>
+
+  <!-- 6. FINAL REASSURANCE — SCHOOL -->
+  <section class="screen screen--reassure" aria-label="A last reassurance">
+    <div class="glow glow--reassure" aria-hidden="true"></div>
+    <div class="reassure__content" data-reveal-block>
+      <p class="reassure__line" data-reveal-line>You will get into school.</p>
+      <p class="reassure__line reassure__line--soft" data-reveal-line>Don&rsquo;t worry, sweetheart. 🤍</p>
+    </div>
+    <div class="fade-to-black" aria-hidden="true"></div>
+  </section>
+
+</main>
+
+<script src="script.js"></script>
+</body>
+</html>
